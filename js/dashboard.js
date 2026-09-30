@@ -109,7 +109,7 @@
     listContainer.innerHTML = schedule.map(item => `
       <div style="background:var(--bg-secondary); border:1px solid var(--border-light); border-radius:var(--radius-lg); padding:1rem 1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:0.75rem;">
         <div style="display:flex; align-items:center; gap:1rem;">
-          <img src="${item.image}" alt="${item.title}" style="width:54px; height:54px; border-radius:var(--radius-md); object-fit:cover;" onerror="this.src='/assets/images/fallbacks/cultural_fallback.svg'" />
+          <img src="${item.image}" alt="${item.title}" style="width:54px; height:54px; border-radius:var(--radius-md); object-fit:cover;" onerror="this.src='./assets/images/fallbacks/cultural_fallback.svg'" />
           <div>
             <span style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--color-orange); letter-spacing:0.5px;">
               ${item.time} &bull; ${item.venue}
