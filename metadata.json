@@ -1,0 +1,6 @@
+{
+  "name": "Global Fusion 2026",
+  "description": "Explore the World Without Leaving Campus — Global Fusion 2026 Cultural Festival at LBEF in academic collaboration with APU.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participant Dashboard — Global Fusion 2026</title>
+    <meta name="description" content="View your digital delegate pass, manage your personal festival itinerary, and track your cultural passport stamps." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    
+    <style>
+      .dash-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-medium);
+        border-radius: var(--radius-xl);
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 2rem;
+      }
+      .digital-pass-card {
+        background: #0B1124;
+        color: #fff;
+        border: 2px solid var(--color-yellow);
+        border-radius: var(--radius-xl);
+        padding: 2.5rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      }
+      .pass-watermark {
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        opacity: 0.08;
+        font-size: 15rem;
+        font-weight: 900;
+        font-family: var(--font-display);
+        line-height: 1;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Institutional Strip -->
+    <aside class="top-collab-strip no-print" aria-label="Institutional Collaboration Info">
+      <div class="collab-left">
+        <img src="/assets/images/branding/lbef_apu_logo.svg" alt="LBEF College &amp; APU Logo" class="logo-img" />
+        <span class="fictional-tag">Fictional Student Event Concept</span>
+      </div>
+      <div class="collab-right">
+        <span>📍 LBEF Campus Grounds, Kathmandu</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>🗓️ 3–5 December 2026</span>
+      </div>
+    </aside>
+
+    <!-- Global Header -->
+    <header class="site-header no-print" id="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-link" aria-label="Global Fusion 2026 Home">
+          <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" class="brand-logo-img" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+            <div class="dropdown-menu">
+              <a href="cultures.html" class="dropdown-item">🌍 Explore Cultures</a>
+              <a href="activities.html" class="dropdown-item">🎨 Activities &amp; Workshops</a>
+              <a href="quiz.html" class="dropdown-item">❓ Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Events ▾</button>
+            <div class="dropdown-menu">
+              <a href="schedule.html" class="dropdown-item">📅 Master Schedule</a>
+              <a href="competitions.html" class="dropdown-item">🏆 Competitions</a>
+              <a href="activities.html" class="dropdown-item">🎭 Stage Showcases</a>
+            </div>
+          </div>
+          <a href="schedule.html" class="nav-link">Schedule</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Resources ▾</button>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-item">📥 Downloads &amp; Guides</a>
+              <a href="news.html" class="dropdown-item">📰 News &amp; Bulletins</a>
+              <a href="faq.html" class="dropdown-item">💡 FAQ</a>
+              <a href="contact.html" class="dropdown-item">✉️ Contact Us</a>
+              <a href="feedback.html" class="dropdown-item">⭐ Feedback Survey</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="passport-quick-btn" data-open-passport title="View Your Passport">
+            <span>🛂 Passport</span>
+            <span class="passport-stamp-counter">1/6</span>
+          </button>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+          </button>
+          <a href="dashboard.html" class="btn-secondary" style="font-size:0.82rem; padding:0.45rem 1rem; border-color:var(--color-orange);">
+            Dashboard
+          </a>
+          <a href="registration.html" class="btn-primary">GET YOUR PASS &rarr;</a>
+          <button class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog">
+      <div class="mobile-nav-header">
+        <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:36px;" />
+        <button id="mobile-menu-close-btn" style="font-size:1.8rem;">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Global Fusion</a>
+        <a href="cultures.html">Explore Cultures</a>
+        <a href="schedule.html">Event Schedule</a>
+        <a href="activities.html">Activities &amp; Workshops</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="dashboard.html" class="active">Participant Dashboard</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Header -->
+      <section class="dash-hero-header no-print" style="background: radial-gradient(circle at 50% 30%, #162447 0%, #070B18 100%); color:#fff; padding:4.5rem 1.5rem 3rem; text-align:center;">
+        <div class="container" style="max-width:850px;">
+          <span class="hero-badge">SIMULATED CLIENT DASHBOARD</span>
+          <h1 id="dash-welcome-name" style="font-family:var(--font-display); font-size:clamp(2.2rem, 4.5vw, 3.6rem); font-weight:900; line-height:1.1; margin-bottom:1rem;">
+            Welcome, Global Delegate!
+          </h1>
+          <p style="font-size:1.1rem; color:#CBD5E1; line-height:1.6;">
+            Manage your personal itinerary, verify your digital admission credentials, and view your digital cultural passport stamps.
+          </p>
+        </div>
+      </section>
+
+      <!-- Dashboard Main Section -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container" style="max-width:1100px;">
+
+          <!-- EMPTY STATE (Shown if no pass in localStorage) -->
+          <div id="dash-empty-view" style="display:none; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:4rem 2.5rem; text-align:center; box-shadow:var(--shadow-lg); margin-bottom:3rem;">
+            <div style="font-size:4rem; margin-bottom:1rem;">🎟️</div>
+            <h2 style="font-family:var(--font-display); font-size:2rem; font-weight:900; margin-bottom:0.75rem;">
+              No Delegate Pass Registered Yet
+            </h2>
+            <p style="font-size:1.05rem; color:var(--text-secondary); max-width:600px; margin:0 auto 2rem; line-height:1.6;">
+              You haven't claimed your Global Fusion 2026 digital pass yet. Registration is 100% complimentary for all collegiate attendees.
+            </p>
+            <div style="display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
+              <a href="registration.html" class="btn-primary" style="padding:0.85rem 2rem; font-size:1rem;">
+                REGISTER FOR PASS NOW &rarr;
+              </a>
+              <button id="dash-create-demo-pass-btn" class="btn-secondary" style="padding:0.85rem 2rem; font-size:1rem;">
+                ⚡ Load Sample Delegate Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- REGISTERED VIEW (Shown if pass exists) -->
+          <div id="dash-registered-view" style="display:none;">
+            <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:2.5rem; align-items:flex-start;">
+              
+              <!-- Left Column: Digital Pass & Quick Actions -->
+              <div>
+                <div class="digital-pass-card" style="text-align:left; margin-bottom:2rem;">
+                  <div class="pass-watermark">GF26</div>
+                  <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem;">
+                    <div>
+                      <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion" style="height:36px; margin-bottom:0.4rem;" />
+                      <span style="font-size:0.75rem; letter-spacing:1px; text-transform:uppercase; color:var(--color-yellow); font-weight:800; display:block;">
+                        OFFICIAL DELEGATE PASS &bull; 2026
+                      </span>
+                    </div>
+                    <div style="text-align:right;">
+                      <span style="font-size:0.75rem; color:#94A3B8; display:block;">PASS ID</span>
+                      <strong id="dash-pass-id" style="font-family:var(--font-mono); font-size:1.3rem; color:var(--color-orange);">
+                        GF26-8842
+                      </strong>
+                    </div>
+                  </div>
+
+                  <div style="margin-bottom:1.5rem;">
+                    <span style="font-size:0.75rem; color:#94A3B8; text-transform:uppercase; letter-spacing:0.5px;">PARTICIPANT NAME</span>
+                    <h3 id="dash-pass-name" style="font-family:var(--font-display); font-size:1.85rem; font-weight:900; line-height:1.1; color:#fff; margin-top:0.25rem;">
+                      Aayush Sharma
+                    </h3>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.5rem 1rem; font-size:0.88rem; color:#CBD5E1; margin-top:0.5rem; align-items:center;">
+                      <div><span style="color:#94A3B8;">Student ID:</span> <strong id="dash-pass-studentid" style="color:#fff;">LB-2026-99</strong></div>
+                      <span aria-hidden="true" style="opacity:0.4;">&bull;</span>
+                      <div><span style="color:#94A3B8;">Faculty:</span> <span id="dash-pass-faculty">BSc (Hons) IT</span></div>
+                      <span aria-hidden="true" style="opacity:0.4;">&bull;</span>
+                      <div><span style="color:#94A3B8;">Nationality:</span> <span id="dash-pass-nationality">Nepal</span></div>
+                    </div>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; border-top:1px solid rgba(255,255,255,0.15); padding-top:1rem; margin-bottom:1.5rem; font-size:0.82rem;">
+                    <div>
+                      <span style="color:#94A3B8; display:block; font-size:0.75rem; text-transform:uppercase;">EVENT DATES</span>
+                      <strong style="color:#fff;">3–5 Dec 2026</strong>
+                    </div>
+                    <div>
+                      <span style="color:#94A3B8; display:block; font-size:0.75rem; text-transform:uppercase;">REGISTRATION STATUS</span>
+                      <strong id="dash-pass-status" style="color:var(--color-green);">CONFIRMED ✓</strong>
+                    </div>
+                    <div>
+                      <span style="color:#94A3B8; display:block; font-size:0.75rem; text-transform:uppercase;">VENUE</span>
+                      <strong style="color:#fff;">LBEF Grounds</strong>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.06); padding:0.85rem 1.25rem; border-radius:var(--radius-md);">
+                    <div>
+                      <span style="font-size:0.72rem; color:#94A3B8; display:block; text-transform:uppercase;">PARTICIPANT TYPE</span>
+                      <span id="dash-pass-type" style="font-size:0.95rem; font-weight:800; color:var(--color-turquoise); display:block; margin-top:0.15rem;">
+                        General Student Delegate
+                      </span>
+                      <small id="dash-pass-comp" style="color:#94A3B8; font-size:0.75rem;">None</small>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:0.6rem;">
+                      <div class="qr-visual" style="background:#fff; padding:6px; border-radius:6px; display:inline-block;" title="Official Delegate Pass QR">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="#000">
+                          <path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 2h2v4h-2v-4zm-4-4h4v2h-4v-2zm4 0h4v2h-4v-2zm-4 4h2v4h-2v-4zm2-2h2v2h-2v-2zM6 6h2v2H6V6zm12 0h2v2h-2V6zM6 18h2v2H6v-2z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pass action buttons -->
+                <div class="no-print" style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:2rem;">
+                  <button onclick="window.print()" class="btn-primary" style="font-size:0.85rem; padding:0.55rem 1.25rem;">
+                    📥 Print / Save Pass
+                  </button>
+                  <button id="dash-edit-profile-btn" class="btn-secondary" style="font-size:0.85rem; padding:0.55rem 1.25rem; cursor:pointer;">
+                    ✏️ Edit Profile Info
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Column: Digital Passport & Announcements -->
+              <div>
+                <!-- Passport Mini-Card -->
+                <div class="dash-card">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                    <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.25rem;">
+                      🛂 Digital Passport Visas
+                    </h3>
+                    <button class="passport-quick-btn" data-open-passport style="font-size:0.75rem; padding:0.35rem 0.75rem;">
+                      Full Passport &rarr;
+                    </button>
+                  </div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">
+                    Earn passport stamps by visiting culture pages and exploring their heritage.
+                  </p>
+                  <div id="dash-passport-chips" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                    <!-- Rendered via GFDashboard.renderDashboardPassport() -->
+                  </div>
+                </div>
+
+                <!-- Announcements Widget -->
+                <div class="dash-card">
+                  <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.25rem; margin-bottom:1rem;">
+                    📢 Delegate Bulletins
+                  </h3>
+                  <div style="display:flex; flex-direction:column; gap:0.85rem; font-size:0.88rem;">
+                    <div style="padding-bottom:0.75rem; border-bottom:1px solid var(--border-light);">
+                      <strong style="color:var(--color-orange);">Shuttle Routes Active</strong>
+                      <p style="color:var(--text-secondary); margin-top:0.2rem;">Free student eco-shuttles depart every 15 mins from Ratna Park to LBEF Main Gate.</p>
+                    </div>
+                    <div>
+                      <strong style="color:var(--color-coral);">Competition Check-In</strong>
+                      <p style="color:var(--text-secondary); margin-top:0.2rem;">Registered culinary and dance contestants must report to Backstage Annex by 08:30 AM.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Venue Card (Dashboard Directions) -->
+                <div class="dash-card">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                    <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--color-orange); letter-spacing:1px;">
+                      VENUE
+                    </span>
+                    <a href="contact.html#getting-here" style="font-size:0.75rem; color:var(--color-turquoise); font-weight:700; text-decoration:none;">
+                      Interactive Map &rarr;
+                    </a>
+                  </div>
+                  <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.25rem; color:var(--text-primary); margin-bottom:0.25rem;">
+                    LBEF College
+                  </h3>
+                  <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1rem; line-height:1.5;">
+                    📍 Maiti Devi Marg, Kathmandu<br />
+                    <span style="font-size:0.78rem; color:var(--text-muted);">Opposite Maitidevi Temple &bull; 3–5 Dec 2026</span>
+                  </p>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=LBEF+College,+Maiti+Devi+Marg,+Kathmandu,+Nepal" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; font-size:0.85rem; padding:0.6rem 1.25rem; width:100%; text-decoration:none;">
+                    📍 GET DIRECTIONS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PERSONAL SAVED SCHEDULE SECTION -->
+          <div class="dash-card" style="margin-top:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem; padding-bottom:1rem; border-bottom:1px solid var(--border-light);">
+              <div>
+                <span class="section-kicker">PERSONAL ITINERARY</span>
+                <h3 style="font-family:var(--font-display); font-weight:900; font-size:1.6rem; color:var(--text-primary);">
+                  My Saved Festival Events (<span id="dash-schedule-count">0 Events</span>)
+                </h3>
+              </div>
+              <div style="display:flex; gap:0.75rem;">
+                <a href="schedule.html" class="btn-primary" style="font-size:0.82rem; padding:0.45rem 1rem;">
+                  + Add More Events
+                </a>
+                <button id="dash-clear-schedule-btn" class="btn-secondary" style="font-size:0.82rem; padding:0.45rem 1rem; color:var(--color-coral);">
+                  Clear Schedule
+                </button>
+              </div>
+            </div>
+
+            <!-- Empty Notice -->
+            <div id="dash-schedule-empty" style="text-align:center; padding:3rem 1.5rem; color:var(--text-muted);">
+              <div style="font-size:2.5rem; margin-bottom:0.75rem;">📅</div>
+              <h4 style="font-size:1.15rem; font-weight:800; color:var(--text-primary); margin-bottom:0.35rem;">No Events Added Yet</h4>
+              <p style="font-size:0.9rem; max-width:480px; margin:0 auto 1.5rem;">
+                Browse our 3-day timetable and click "+ Add To My Schedule" to bookmark stage concerts, workshops, and food tastings.
+              </p>
+              <a href="schedule.html" class="btn-secondary">Browse Master Schedule &rarr;</a>
+            </div>
+
+            <!-- Dynamic Schedule List -->
+            <div id="dash-schedule-list">
+              <!-- Rendered via GFDashboard.renderScheduleSection() -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Edit Profile Modal Dialog (Requirement 3) -->
+      <div id="edit-profile-modal" class="gf-modal-backdrop no-print" role="dialog" aria-modal="true" aria-labelledby="edit-profile-modal-title" style="display:none; position:fixed; inset:0; z-index:1050; background:rgba(7,11,24,0.85); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:1.5rem; overflow-y:auto;">
+        <div class="gf-modal-card" style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); width:100%; max-width:580px; box-shadow:var(--shadow-xl); overflow:hidden; position:relative; max-height:90vh; display:flex; flex-direction:column;">
+          
+          <!-- Header -->
+          <div style="padding:1.5rem 1.75rem; border-bottom:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center; background:var(--bg-secondary);">
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              <span style="font-size:1.3rem;">✏️</span>
+              <h3 id="edit-profile-modal-title" style="font-family:var(--font-display); font-weight:800; font-size:1.35rem; color:var(--text-primary); margin:0;">
+                Edit Profile Information
+              </h3>
+            </div>
+            <button id="edit-profile-close-x" class="modal-close-btn" aria-label="Close Edit Profile Modal" style="background:none; border:none; color:var(--text-muted); font-size:1.6rem; cursor:pointer; padding:0.25rem 0.5rem; line-height:1; border-radius:var(--radius-sm); transition:color 0.2s;">
+              &times;
+            </button>
+          </div>
+
+          <!-- Form Body -->
+          <form id="edit-profile-form" novalidate style="padding:1.75rem; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:1.25rem;">
+            
+            <div class="form-group">
+              <label for="edit-profile-name" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                Full Name <span style="color:var(--color-coral);">*</span>
+              </label>
+              <input type="text" id="edit-profile-name" name="fullName" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem;" placeholder="e.g. Aayush Sharma" required />
+              <div id="edit-err-name" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label for="edit-profile-studentid" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                  Student ID <span style="color:var(--color-coral);">*</span>
+                </label>
+                <input type="text" id="edit-profile-studentid" name="studentId" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem;" placeholder="e.g. LB-2026-99" required />
+                <div id="edit-err-studentid" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-profile-nationality" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                  Nationality <span style="color:var(--color-coral);">*</span>
+                </label>
+                <input type="text" id="edit-profile-nationality" name="nationality" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem;" placeholder="e.g. Nepal" required />
+                <div id="edit-err-nationality" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label for="edit-profile-email" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                  Email <span style="color:var(--color-coral);">*</span>
+                </label>
+                <input type="email" id="edit-profile-email" name="email" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem;" placeholder="student@lbef.edu.np" required />
+                <div id="edit-err-email" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-profile-phone" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                  Phone <span style="color:var(--color-coral);">*</span>
+                </label>
+                <input type="tel" id="edit-profile-phone" name="phone" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem;" placeholder="+977-9841223344" required />
+                <div id="edit-err-phone" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="edit-profile-faculty" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                Faculty / Programme <span style="color:var(--color-coral);">*</span>
+              </label>
+              <input type="text" id="edit-profile-faculty" name="faculty" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem;" placeholder="e.g. BSc (Hons) Information Technology" required />
+              <div id="edit-err-faculty" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="edit-profile-type" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
+                Participant Type <span style="color:var(--color-coral);">*</span>
+              </label>
+              <select id="edit-profile-type" name="participationType" class="form-input" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--border-medium); background:var(--bg-primary); color:var(--text-primary); font-size:0.95rem; cursor:pointer;" required>
+                <option value="General Student Delegate">General Student Delegate</option>
+                <option value="VIP Student Delegate (All-Access)">VIP Student Delegate (All-Access)</option>
+                <option value="Cultural Ambassador / Volunteer">Cultural Ambassador / Volunteer</option>
+                <option value="Stage Performer / Artist">Stage Performer / Artist</option>
+                <option value="Competition Participant">Competition Participant</option>
+              </select>
+              <div id="edit-err-type" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
+            </div>
+
+          </form>
+
+          <!-- Footer -->
+          <div style="padding:1.25rem 1.75rem; border-top:1px solid var(--border-light); display:flex; justify-content:flex-end; gap:0.75rem; background:var(--bg-secondary);">
+            <button type="button" id="edit-profile-cancel-btn" class="btn-secondary" style="padding:0.6rem 1.25rem; font-size:0.9rem; cursor:pointer;">
+              CANCEL
+            </button>
+            <button type="button" id="edit-profile-save-btn" class="btn-primary" style="padding:0.6rem 1.5rem; font-size:0.9rem; cursor:pointer;">
+              SAVE CHANGES
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer no-print">
+      <div class="container">
+        <div class="footer-disclaimer">
+          <strong>Academic Collaboration Disclaimer:</strong> Global Fusion 2026 is a fictional event concept created for an academic student web development project by LBEF College in collaboration with Asia Pacific University of Technology &amp; Innovation (APU).
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:44px;" />
+            <p>“One Campus. Many Cultures. One Global Experience.”</p>
+            <div class="footer-logo-collab">
+              <img src="/assets/images/branding/lbef_apu_logo.svg" alt="LBEF APU Collaboration" style="width:100%; height:auto;" />
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Global Fusion</a>
+              <a href="schedule.html">Festival Schedule</a>
+              <a href="gallery.html">Multimedia Gallery</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <div class="footer-links">
+              <a href="cultures.html">Explore Cultures</a>
+              <a href="activities.html">Activities &amp; Stalls</a>
+              <a href="competitions.html">Competitions</a>
+              <a href="quiz.html">Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Participant</h4>
+            <div class="footer-links">
+              <a href="registration.html">Get Your Pass</a>
+              <a href="dashboard.html">Participant Dashboard</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Global Fusion Student Committee. Fictional Academic Project.</div>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="color:var(--color-orange); font-weight:700;">Back to Top &uarr;</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/passport.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

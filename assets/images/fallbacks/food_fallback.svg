@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="foodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0B2E" />
+      <stop offset="50%" stop-color="#3D1255" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+    <pattern id="foodPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.2" fill="rgba(255,255,255,0.12)" />
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#foodGrad)" />
+  <rect width="800" height="500" fill="url(#foodPattern)" />
+  
+  <g transform="translate(400, 205)" text-anchor="middle">
+    <!-- Plate / Bowl Icon -->
+    <ellipse cx="0" cy="20" rx="70" ry="25" fill="rgba(255,255,255,0.08)" stroke="#FFD93D" stroke-width="3" />
+    <path d="M-55,20 C-50,55 50,55 55,20 Z" fill="rgba(255,159,28,0.2)" stroke="#FFD93D" stroke-width="3" />
+    <!-- Steam Lines -->
+    <path d="M-20,-10 Q-30,-30 -20,-50" fill="none" stroke="#FF4D6D" stroke-width="3" stroke-linecap="round" />
+    <path d="M0,-15 Q10,-35 0,-55" fill="none" stroke="#FFD93D" stroke-width="3" stroke-linecap="round" />
+    <path d="M20,-10 Q10,-30 20,-50" fill="none" stroke="#00CFC8" stroke-width="3" stroke-linecap="round" />
+  </g>
+  
+  <text x="400" y="340" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="1">
+    GLOBAL GASTRONOMY &amp; TASTE
+  </text>
+  <text x="400" y="375" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">
+    AUTHENTIC STREET DELICACIES &bull; FOOD CARNIVAL
+  </text>
+</svg>

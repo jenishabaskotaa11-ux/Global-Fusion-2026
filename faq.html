@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions — Global Fusion 2026</title>
+    <meta name="description" content="Find answers to all your questions regarding registration, pavilion entry, competitions, dietary accommodations, and accessibility." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+  </head>
+  <body>
+    <!-- Institutional Strip -->
+    <aside class="top-collab-strip" aria-label="Institutional Collaboration Info">
+      <div class="collab-left">
+        <img src="/assets/images/branding/lbef_apu_logo.svg" alt="LBEF College &amp; APU Logo" class="logo-img" />
+        <span class="fictional-tag">Fictional Student Event Concept</span>
+      </div>
+      <div class="collab-right">
+        <span>📍 LBEF Campus Grounds, Kathmandu</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>🗓️ 3–5 December 2026</span>
+      </div>
+    </aside>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-link" aria-label="Global Fusion 2026 Home">
+          <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" class="brand-logo-img" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+            <div class="dropdown-menu">
+              <a href="cultures.html" class="dropdown-item">🌍 Explore Cultures</a>
+              <a href="activities.html" class="dropdown-item">🎨 Activities &amp; Workshops</a>
+              <a href="quiz.html" class="dropdown-item">❓ Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Events ▾</button>
+            <div class="dropdown-menu">
+              <a href="schedule.html" class="dropdown-item">📅 Master Schedule</a>
+              <a href="competitions.html" class="dropdown-item">🏆 Competitions</a>
+              <a href="activities.html" class="dropdown-item">🎭 Stage Showcases</a>
+            </div>
+          </div>
+          <a href="schedule.html" class="nav-link">Schedule</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link active" aria-haspopup="true" aria-expanded="false">Resources ▾</button>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-item">📥 Downloads &amp; Guides</a>
+              <a href="news.html" class="dropdown-item">📰 News &amp; Bulletins</a>
+              <a href="faq.html" class="dropdown-item">💡 FAQ</a>
+              <a href="contact.html" class="dropdown-item">✉️ Contact Us</a>
+              <a href="feedback.html" class="dropdown-item">⭐ Feedback Survey</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="passport-quick-btn" data-open-passport title="View Your Passport">
+            <span>🛂 Passport</span>
+            <span class="passport-stamp-counter">1/6</span>
+          </button>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+          </button>
+          <a href="dashboard.html" class="btn-secondary" style="font-size:0.82rem; padding:0.45rem 1rem;">Dashboard</a>
+          <a href="registration.html" class="btn-primary">GET YOUR PASS &rarr;</a>
+          <button class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog">
+      <div class="mobile-nav-header">
+        <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:36px;" />
+        <button id="mobile-menu-close-btn" style="font-size:1.8rem;">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Global Fusion</a>
+        <a href="cultures.html">Explore Cultures</a>
+        <a href="schedule.html">Event Schedule</a>
+        <a href="activities.html">Activities &amp; Workshops</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="dashboard.html">Participant Dashboard</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Header -->
+      <section style="background: radial-gradient(circle at 50% 30%, #162447 0%, #070B18 100%); color:#fff; padding:5rem 1.5rem 3.5rem; text-align:center;">
+        <div class="container" style="max-width:850px;">
+          <span class="hero-badge">HELP CENTER &amp; ANSWERS</span>
+          <h1 style="font-family:var(--font-display); font-size:clamp(2.4rem, 5vw, 4rem); font-weight:900; line-height:1.1; margin-bottom:1rem;">
+            FREQUENTLY ASKED QUESTIONS
+          </h1>
+          <p style="font-size:1.15rem; color:#CBD5E1; line-height:1.6;">
+            Have questions about attendance, delegate passes, performance rules, or venue accessibility? Search our knowledge base or filter by category below.
+          </p>
+        </div>
+      </section>
+
+      <!-- Category Filter Tabs & Search Bar -->
+      <section style="background-color: var(--bg-secondary); border-bottom:1px solid var(--border-light); padding:1.25rem 0;">
+        <div class="container">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem;">
+            <!-- Category Tabs -->
+            <div style="display:flex; gap:0.45rem; flex-wrap:wrap;">
+              <button class="btn-secondary active" data-faq-category="all" style="font-size:0.8rem; padding:0.4rem 0.9rem;">ALL</button>
+              <button class="btn-secondary" data-faq-category="general" style="font-size:0.8rem; padding:0.4rem 0.9rem;">GENERAL</button>
+              <button class="btn-secondary" data-faq-category="registration" style="font-size:0.8rem; padding:0.4rem 0.9rem;">REGISTRATION</button>
+              <button class="btn-secondary" data-faq-category="activities" style="font-size:0.8rem; padding:0.4rem 0.9rem;">ACTIVITIES</button>
+              <button class="btn-secondary" data-faq-category="competitions" style="font-size:0.8rem; padding:0.4rem 0.9rem;">COMPETITIONS</button>
+              <button class="btn-secondary" data-faq-category="tickets" style="font-size:0.8rem; padding:0.4rem 0.9rem;">TICKETS</button>
+              <button class="btn-secondary" data-faq-category="venue" style="font-size:0.8rem; padding:0.4rem 0.9rem;">VENUE</button>
+              <button class="btn-secondary" data-faq-category="accessibility" style="font-size:0.8rem; padding:0.4rem 0.9rem;">ACCESSIBILITY</button>
+            </div>
+
+            <!-- Search Field -->
+            <div style="position:relative; min-width:260px;">
+              <input type="text" id="faq-search-input" placeholder="Type a question or keyword..." style="width:100%; padding:0.55rem 1rem 0.55rem 2.2rem; border-radius:var(--radius-full); border:1px solid var(--border-medium); background:var(--bg-card); color:var(--text-primary); font-size:0.85rem;" />
+              <span style="position:absolute; left:0.75rem; top:50%; transform:translateY(-50%); font-size:0.85rem; opacity:0.6;">🔍</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accordion FAQ Container -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container" style="max-width:860px;">
+          <div id="faq-accordion-container">
+            <!-- Dynamic JavaScript Render via GFFAQ.renderFAQs() -->
+          </div>
+
+          <!-- Still have questions card -->
+          <div style="margin-top:3.5rem; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2.5rem; text-align:center;">
+            <h3 style="font-family:var(--font-display); font-size:1.4rem; font-weight:800; margin-bottom:0.5rem;">
+              Still have a specific question?
+            </h3>
+            <p style="font-size:0.95rem; color:var(--text-secondary); max-width:550px; margin:0 auto 1.5rem;">
+              Our student liaison committee is here to assist delegates, performers, and media partners.
+            </p>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+              <a href="contact.html" class="btn-primary">Contact Organizing Team &rarr;</a>
+              <a href="resources.html" class="btn-secondary">Download Participant Guide</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-disclaimer">
+          <strong>Academic Collaboration Disclaimer:</strong> Global Fusion 2026 is a fictional event concept created for an academic student web development project by LBEF College in collaboration with Asia Pacific University of Technology &amp; Innovation (APU).
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:44px;" />
+            <p>“One Campus. Many Cultures. One Global Experience.”</p>
+            <div class="footer-logo-collab">
+              <img src="/assets/images/branding/lbef_apu_logo.svg" alt="LBEF APU Collaboration" style="width:100%; height:auto;" />
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Global Fusion</a>
+              <a href="schedule.html">Festival Schedule</a>
+              <a href="gallery.html">Multimedia Gallery</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <div class="footer-links">
+              <a href="cultures.html">Explore Cultures</a>
+              <a href="activities.html">Activities &amp; Stalls</a>
+              <a href="competitions.html">Competitions</a>
+              <a href="quiz.html">Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Participant</h4>
+            <div class="footer-links">
+              <a href="registration.html">Get Your Pass</a>
+              <a href="dashboard.html">Participant Dashboard</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Global Fusion Student Committee. Fictional Academic Project.</div>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="color:var(--color-orange); font-weight:700;">Back to Top &uarr;</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/passport.js"></script>
+    <script src="/js/faq.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

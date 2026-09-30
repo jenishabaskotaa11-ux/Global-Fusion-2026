@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="festGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="50%" stop-color="#1C2541" />
+      <stop offset="100%" stop-color="#3A86FF" />
+    </linearGradient>
+    <pattern id="festPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="rgba(255,255,255,0.15)" />
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#festGrad)" />
+  <rect width="800" height="500" fill="url(#festPattern)" />
+  
+  <g transform="translate(400, 205)" text-anchor="middle">
+    <circle cx="0" cy="0" r="65" fill="rgba(255,255,255,0.06)" stroke="#00CFC8" stroke-width="2.5" />
+    <!-- Globe Lines -->
+    <ellipse cx="0" cy="0" rx="30" ry="65" fill="none" stroke="#FFD93D" stroke-width="2" />
+    <line x1="-65" y1="0" x2="65" y2="0" stroke="#FF4D6D" stroke-width="2" />
+    <!-- Sparkles -->
+    <path d="M-60,-50 L-50,-50 M-55,-55 L-55,-45" stroke="#FFD93D" stroke-width="2" stroke-linecap="round" />
+    <path d="M60,-40 L70,-40 M65,-45 L65,-35" stroke="#00CFC8" stroke-width="2" stroke-linecap="round" />
+  </g>
+  
+  <text x="400" y="340" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="1">
+    GLOBAL FUSION 2026
+  </text>
+  <text x="400" y="375" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="600" font-size="14" letter-spacing="2">
+    ONE CAMPUS &bull; MANY CULTURES &bull; ONE GLOBAL EXPERIENCE
+  </text>
+</svg>

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources &amp; Downloads — Global Fusion 2026</title>
+    <meta name="description" content="Download official festival brochures, competition rulebooks, campus venue maps, and participant guidelines." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+  </head>
+  <body>
+    <!-- Institutional Strip -->
+    <aside class="top-collab-strip" aria-label="Institutional Collaboration Info">
+      <div class="collab-left">
+        <img src="/assets/images/branding/lbef_apu_logo.svg" alt="LBEF College &amp; APU Logo" class="logo-img" />
+        <span class="fictional-tag">Fictional Student Event Concept</span>
+      </div>
+      <div class="collab-right">
+        <span>📍 LBEF Campus Grounds, Kathmandu</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>🗓️ 3–5 December 2026</span>
+      </div>
+    </aside>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-link" aria-label="Global Fusion 2026 Home">
+          <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" class="brand-logo-img" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+            <div class="dropdown-menu">
+              <a href="cultures.html" class="dropdown-item">🌍 Explore Cultures</a>
+              <a href="activities.html" class="dropdown-item">🎨 Activities &amp; Workshops</a>
+              <a href="quiz.html" class="dropdown-item">❓ Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Events ▾</button>
+            <div class="dropdown-menu">
+              <a href="schedule.html" class="dropdown-item">📅 Master Schedule</a>
+              <a href="competitions.html" class="dropdown-item">🏆 Competitions</a>
+              <a href="activities.html" class="dropdown-item">🎭 Stage Showcases</a>
+            </div>
+          </div>
+          <a href="schedule.html" class="nav-link">Schedule</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link active" aria-haspopup="true" aria-expanded="false">Resources ▾</button>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-item">📥 Downloads &amp; Guides</a>
+              <a href="news.html" class="dropdown-item">📰 News &amp; Bulletins</a>
+              <a href="faq.html" class="dropdown-item">💡 FAQ</a>
+              <a href="contact.html" class="dropdown-item">✉️ Contact Us</a>
+              <a href="feedback.html" class="dropdown-item">⭐ Feedback Survey</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="passport-quick-btn" data-open-passport title="View Your Passport">
+            <span>🛂 Passport</span>
+            <span class="passport-stamp-counter">1/6</span>
+          </button>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+          </button>
+          <a href="dashboard.html" class="btn-secondary" style="font-size:0.82rem; padding:0.45rem 1rem;">Dashboard</a>
+          <a href="registration.html" class="btn-primary">GET YOUR PASS &rarr;</a>
+          <button class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog">
+      <div class="mobile-nav-header">
+        <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:36px;" />
+        <button id="mobile-menu-close-btn" style="font-size:1.8rem;">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Global Fusion</a>
+        <a href="cultures.html">Explore Cultures</a>
+        <a href="schedule.html">Event Schedule</a>
+        <a href="activities.html">Activities &amp; Workshops</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="resources.html" class="active">Resources &amp; Downloads</a>
+        <a href="faq.html">FAQ</a>
+        <a href="dashboard.html">Participant Dashboard</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Header -->
+      <section style="background: radial-gradient(circle at 50% 30%, #162447 0%, #070B18 100%); color:#fff; padding:5rem 1.5rem 3.5rem; text-align:center;">
+        <div class="container" style="max-width:850px;">
+          <span class="hero-badge">OFFICIAL DOCUMENTATION &amp; KITS</span>
+          <h1 style="font-family:var(--font-display); font-size:clamp(2.4rem, 5vw, 4rem); font-weight:900; line-height:1.1; margin-bottom:1rem;">
+            RESOURCES &amp; DOWNLOADS
+          </h1>
+          <p style="font-size:1.15rem; color:#CBD5E1; line-height:1.6;">
+            Access all essential festival publications: full schedules, competition rubrics, venue maps, booth specs, and media assets ready for instant download.
+          </p>
+        </div>
+      </section>
+
+      <!-- Resources Grid -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+
+            <!-- 1. Festival Brochure -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Festival Brochure" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-coral);">PDF Document</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PDF &bull; 4.2 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Official Festival Brochure 2026</h3>
+                <p class="pavilion-card-desc">Full 24-page editorial magazine featuring pavilion guides, academic partnership history, performer bios, and campus maps.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Festival_Brochure_2026.pdf', 'Global Fusion 2026 Official Festival Brochure')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download PDF (4.2 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Complete Event Schedule -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80" alt="Event Schedule" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-orange);">PDF Itinerary</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PDF &bull; 1.8 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Complete 3-Day Event Timetable</h3>
+                <p class="pavilion-card-desc">Detailed hour-by-hour breakdown of all stage performances, parade routes, food street hours, and workshops across Days 1–3.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Event_Timetable_2026.pdf', 'Global Fusion 2026 Master Timetable')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Timetable (1.8 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Participant Guide -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="Participant Guide" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-turquoise); color:#101A3A;">Delegate Kit</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PDF &bull; 2.5 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Participant &amp; Delegate Handbook</h3>
+                <p class="pavilion-card-desc">Essential attendee manual covering gate check-in, digital pass validation, locker facilities, food token vouchers, and shuttle schedules.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Participant_Guide_2026.pdf', 'Global Fusion Participant Handbook')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Handbook (2.5 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Competition Rulebook -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Competition Rulebook" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-purple);">Official Rules</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PDF &bull; 3.1 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Competition Rulebook &amp; Rubrics</h3>
+                <p class="pavilion-card-desc">Detailed guidelines, eligibility criteria, judging rubrics, and prize distribution policies for all NRs 350,000 competitions.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Competition_Rulebook_2026.pdf', 'Global Fusion 2026 Competition Rules')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Rulebook (3.1 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Festival Venue Map -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Festival Map" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-yellow); color:#101A3A;">Hi-Res Map</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PNG / Vector &bull; 5.4 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Campus Festival Map &amp; Concourse Layout</h3>
+                <p class="pavilion-card-desc">Color-coded schematic map showing all 6 Cultural Pavilions, Main Arena, Food Street, first aid medical tents, and parking lots.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Festival_Map_2026.png', 'Global Fusion Campus Grounds Map')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Map (5.4 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Cultural Booth Guidelines -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Booth Guidelines" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-green);">Exhibitors</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PDF &bull; 1.6 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Cultural Booth &amp; Stall Guidelines</h3>
+                <p class="pavilion-card-desc">Electrical load specifications, fire safety protocols, food hygiene certifications, and display decorating rules for student exhibitors.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Booth_Guidelines_2026.pdf', 'Cultural Booth & Food Stall Guidelines')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Specs (1.6 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7. Volunteer Guide -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80" alt="Volunteer Guide" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-coral);">Volunteer</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">PDF &bull; 1.2 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Student Volunteer Crew Manual</h3>
+                <p class="pavilion-card-desc">Shift schedules, emergency contact protocols, hospitality guidelines, and accreditation benefits for our 120-member volunteer team.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Volunteer_Manual_2026.pdf', 'Student Volunteer Crew Manual')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Manual (1.2 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8. Media Kit -->
+            <article class="pavilion-card">
+              <div class="pavilion-img-wrap" style="height:190px;">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Media Kit" class="pavilion-img" loading="lazy" />
+                <span class="pavilion-badge-tag" style="background:var(--color-turquoise); color:#101A3A;">Press Assets</span>
+              </div>
+              <div class="pavilion-card-body">
+                <span style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">ZIP Archive &bull; 14.8 MB</span>
+                <h3 class="pavilion-card-title" style="margin-top:0.35rem;">Official Press Kit &amp; Vector Logos</h3>
+                <p class="pavilion-card-desc">High-resolution brand logos (SVG/PNG), institutional collaboration lockups, festival posters, press releases, and editorial photography.</p>
+                <div class="pavilion-card-footer">
+                  <button onclick="downloadResource('Global_Fusion_MediaKit_2026.zip', 'Official Press & Media Kit')" class="btn-primary" style="font-size:0.8rem; padding:0.45rem 1.1rem; width:100%;">
+                    📥 Download Media Kit (14.8 MB)
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-disclaimer">
+          <strong>Academic Collaboration Disclaimer:</strong> Global Fusion 2026 is a fictional event concept created for an academic student web development project by LBEF College in collaboration with Asia Pacific University of Technology &amp; Innovation (APU).
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img src="/assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:44px;" />
+            <p>“One Campus. Many Cultures. One Global Experience.”</p>
+            <div class="footer-logo-collab">
+              <img src="/assets/images/branding/lbef_apu_logo.svg" alt="LBEF APU Collaboration" style="width:100%; height:auto;" />
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Global Fusion</a>
+              <a href="schedule.html">Festival Schedule</a>
+              <a href="gallery.html">Multimedia Gallery</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <div class="footer-links">
+              <a href="cultures.html">Explore Cultures</a>
+              <a href="activities.html">Activities &amp; Stalls</a>
+              <a href="competitions.html">Competitions</a>
+              <a href="quiz.html">Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Participant</h4>
+            <div class="footer-links">
+              <a href="registration.html">Get Your Pass</a>
+              <a href="dashboard.html">Participant Dashboard</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Global Fusion Student Committee. Fictional Academic Project.</div>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="color:var(--color-orange); font-weight:700;">Back to Top &uarr;</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/theme.js"></script>
+    <script src="/js/passport.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      // Functional resource document generator & download simulator
+      function downloadResource(filename, title) {
+        const textContent = `==========================================================
+GLOBAL FUSION 2026 — OFFICIAL ACADEMIC PUBLICATION
+"One Campus. Many Cultures. One Global Experience."
+Student Project by LBEF College in Academic Collaboration with APU
+==========================================================
+Document: ${title}
+File: ${filename}
+Issued: December 2026
+Venue: LBEF Campus Grounds & Floating Pavilion, Kathmandu, Nepal
+
+SUMMARY & KEY BRIEFING:
+This publication is part of the official documentation kit for Global Fusion 2026.
+Event Dates: 3–5 December 2026
+Featured Nations: Nepal, Malaysia, Japan, India, Brazil, Nigeria, and more.
+Flagship Awards Pool: NRs 350,000
+
+For full schedule and digital passes, visit:
+https://globalfusion2026.lbef.edu.np
+
+Disclaimer:
+Global Fusion 2026 is a fictional event concept created for an academic student
+web development assignment.
+==========================================================`;
+
+        const blob = new Blob([textContent], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename.replace('.pdf', '.txt').replace('.png', '.txt').replace('.zip', '.txt');
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        window.GFUtils && window.GFUtils.showToast(`Downloading: ${title}`, 'success');
+      }
+    </script>
+  </body>
+</html>
