@@ -1,12 +1,22 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import {cpSync} from 'node:fs';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
     base: './',
-    plugins: [react(), tailwindcss()],
+    publicDir: false,
+    plugins: [react(), tailwindcss(), {
+      name: 'copy-static-website-files',
+      closeBundle() {
+        // Keep runtime audio, fallback images, and classic scripts at their original URLs.
+        for (const folder of ['css', 'js', 'assets']) {
+          cpSync(path.resolve(__dirname, folder), path.resolve(__dirname, 'dist', folder), {recursive: true});
+        }
+      },
+    }],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
