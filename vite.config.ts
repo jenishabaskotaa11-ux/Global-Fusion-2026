@@ -15,21 +15,7 @@ export default defineConfig(() => {
     build: {
       rollupOptions: {
         input: {
-          legacy_about: path.resolve(__dirname, 'about.html'),
-          legacy_activities: path.resolve(__dirname, 'activities.html'),
-          legacy_competitions: path.resolve(__dirname, 'competitions.html'),
-          legacy_contact: path.resolve(__dirname, 'contact.html'),
-          legacy_cultures: path.resolve(__dirname, 'cultures.html'),
-          legacy_dashboard: path.resolve(__dirname, 'dashboard.html'),
-          legacy_faq: path.resolve(__dirname, 'faq.html'),
-          legacy_feedback: path.resolve(__dirname, 'feedback.html'),
-          legacy_gallery: path.resolve(__dirname, 'gallery.html'),
           legacy_index: path.resolve(__dirname, 'index.html'),
-          legacy_news: path.resolve(__dirname, 'news.html'),
-          legacy_quiz: path.resolve(__dirname, 'quiz.html'),
-          legacy_registration: path.resolve(__dirname, 'registration.html'),
-          legacy_resources: path.resolve(__dirname, 'resources.html'),
-          legacy_schedule: path.resolve(__dirname, 'schedule.html'),
           index: path.resolve(__dirname, 'html/index.html'),
           about: path.resolve(__dirname, 'html/about.html'),
           cultures: path.resolve(__dirname, 'html/cultures.html'),
