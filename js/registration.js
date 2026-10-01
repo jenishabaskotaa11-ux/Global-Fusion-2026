@@ -78,7 +78,7 @@
 
       const phoneInput = document.getElementById('reg-phone');
       const phoneErr = document.getElementById('reg-phone-error');
-      const phoneVal = V.validatePhone(phoneInput ? phoneInput.value : '');
+      const phoneVal = V.validatePhone(phoneInput ? phoneInput.value : '', document.getElementById('reg-nationality')?.value || 'Nepal');
       V.setFieldState(phoneInput, phoneErr, phoneVal);
 
       if (!nameVal.valid || !idVal.valid || !emailVal.valid || !phoneVal.valid) {
@@ -138,7 +138,7 @@
     const revComp = document.getElementById('review-competition');
 
     if (revName) revName.textContent = formData.fullName;
-    if (revId) revId.textContent = formData.studentId;
+    if (revId) revId.textContent = formData.studentId || 'Not provided';
     if (revEmail) revEmail.textContent = formData.email;
     if (revPhone) revPhone.textContent = formData.phone;
     if (revFaculty) revFaculty.textContent = formData.faculty;
@@ -187,7 +187,7 @@
     if (passNameEl) passNameEl.textContent = passRecord.fullName;
     if (passIdEl) passIdEl.textContent = passRecord.passId;
     if (passTypeEl) passTypeEl.textContent = passRecord.participationType;
-    if (passInstEl) passInstEl.textContent = `${passRecord.faculty} • ${passRecord.studentId}`;
+    if (passInstEl) passInstEl.textContent = [passRecord.faculty, passRecord.studentId].filter(Boolean).join(' • ');
     if (passCompEl) passCompEl.textContent = passRecord.competition !== 'None' ? `🏆 Comp: ${passRecord.competition}` : 'General Attendee';
 
     currentStep = 5;
@@ -196,6 +196,28 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    const countryInput = document.getElementById('reg-nationality');
+    const phoneInput = document.getElementById('reg-phone');
+    const phoneError = document.getElementById('reg-phone-error');
+    const phoneHint = document.getElementById('reg-phone-hint');
+    function updatePhoneCountry() {
+      if (!phoneInput || !window.GFValidation) return;
+      const country = countryInput ? countryInput.value : 'Nepal';
+      const hint = window.GFValidation.getPhoneHint(country);
+      if (phoneHint) phoneHint.textContent = hint;
+      phoneInput.placeholder = hint.includes('Example: ') ? 'e.g. ' + hint.split('Example: ')[1] : 'e.g. +1 202 555 0123';
+      if (phoneInput.value.trim()) {
+        window.GFValidation.setFieldState(phoneInput, phoneError, window.GFValidation.validatePhone(phoneInput.value, country));
+      }
+    }
+    if (countryInput) countryInput.addEventListener('change', updatePhoneCountry);
+    if (phoneInput) phoneInput.addEventListener('blur', () => {
+      if (phoneInput.value.trim() && window.GFValidation) {
+        window.GFValidation.setFieldState(phoneInput, phoneError, window.GFValidation.validatePhone(phoneInput.value, countryInput?.value || 'Nepal'));
+      }
+    });
+    updatePhoneCountry();
+
     // Next step button
     const nextBtn = document.getElementById('reg-next-btn');
     if (nextBtn) {

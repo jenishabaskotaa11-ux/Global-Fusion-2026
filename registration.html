@@ -250,10 +250,10 @@
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                   <div>
                     <label for="reg-student-id" style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.4rem;">
-                      Student / Delegate ID <span style="color:var(--color-coral);">*</span>
+                      Student / Delegate ID (optional)
                     </label>
-                    <input type="text" id="reg-student-id" class="form-input-field" placeholder="e.g. LB-2026 or APU-1044" required />
-                    <div id="reg-id-error" class="inline-err-msg">Student ID is required.</div>
+                    <input type="text" id="reg-student-id" class="form-input-field" placeholder="e.g. LB-2026 or APU-1044" />
+                    <div id="reg-id-error" class="inline-err-msg"></div>
                   </div>
 
                   <div>
@@ -284,7 +284,8 @@
                     <label for="reg-phone" style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.4rem;">
                       Phone Number <span style="color:var(--color-coral);">*</span>
                     </label>
-                    <input type="tel" id="reg-phone" class="form-input-field" placeholder="e.g. +977-9841234567" required />
+                    <input type="tel" id="reg-phone" aria-describedby="reg-phone-hint reg-phone-error" class="form-input-field" placeholder="e.g. +977-9841234567" required />
+                    <div id="reg-phone-hint" style="font-size:0.78rem; color:var(--text-secondary); margin-top:0.35rem;" aria-live="polite"></div>
                     <div id="reg-phone-error" class="inline-err-msg">Valid phone number is required.</div>
                   </div>
                 </div>
