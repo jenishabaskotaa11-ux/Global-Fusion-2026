@@ -92,8 +92,9 @@
       updateTimerDisplay();
       if (timerSeconds <= 0) {
         clearInterval(timerInterval);
-        // Auto-advance if not answered
-        nextQuestion();
+        // Never skip an unanswered question when the timer expires.
+        if (userAnswers[currentQIdx] !== null) nextQuestion();
+        else showAnswerRequired('Time is up. Please select an answer to continue.');
       }
     }, 1000);
   }
@@ -135,6 +136,8 @@
     }
 
     if (nextBtn) {
+      nextBtn.disabled = userAnswers[currentQIdx] === null;
+      nextBtn.style.opacity = nextBtn.disabled ? '0.5' : '1';
       nextBtn.textContent = currentQIdx === total - 1 ? 'Finish & See Score 🏆' : 'Next Question →';
     }
 
@@ -153,10 +156,18 @@
       }).join('');
     }
 
+    const requiredMsg = document.getElementById('quiz-answer-required');
+    if (requiredMsg) requiredMsg.textContent = userAnswers[currentQIdx] === null ? 'Select an answer to continue. All questions are required.' : '';
     startTimer();
   }
 
+  function showAnswerRequired(message) {
+    const el = document.getElementById('quiz-answer-required');
+    if (el) el.textContent = message || 'Please select an answer before continuing.';
+  }
+
   function selectAnswer(idx) {
+    if (!Number.isInteger(idx) || idx < 0 || idx >= QUIZ_QUESTIONS[currentQIdx].options.length) return;
     userAnswers[currentQIdx] = idx;
     renderQuestion();
   }
@@ -169,6 +180,10 @@
   }
 
   function nextQuestion() {
+    if (userAnswers[currentQIdx] === null) {
+      showAnswerRequired();
+      return;
+    }
     if (currentQIdx < QUIZ_QUESTIONS.length - 1) {
       currentQIdx++;
       renderQuestion();
@@ -178,6 +193,13 @@
   }
 
   function finishQuiz() {
+    const unanswered = userAnswers.findIndex(answer => answer === null);
+    if (unanswered !== -1) {
+      currentQIdx = unanswered;
+      renderQuestion();
+      showAnswerRequired('Please answer every question before finishing the quiz.');
+      return;
+    }
     clearInterval(timerInterval);
 
     let score = 0;
