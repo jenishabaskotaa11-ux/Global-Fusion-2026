@@ -13,8 +13,8 @@
       genre: 'Himalayan Folk Heritage',
       duration: 145,
       photo: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=300&q=80',
-      src: './assets/audio/nepal_sarangi.mp3',
-      fallbackSrc: './assets/audio/nepal_sarangi.wav'
+      src: '../assets/audio/nepal_sarangi.mp3',
+      fallbackSrc: '../assets/audio/nepal_sarangi.wav'
     },
     {
       id: 'malaysia_gamelan',
@@ -23,8 +23,8 @@
       genre: 'Traditional Malay Palace Orchestra',
       duration: 168,
       photo: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=300&q=80',
-      src: './assets/audio/malaysia_gamelan.mp3',
-      fallbackSrc: './assets/audio/malaysia_gamelan.wav'
+      src: '../assets/audio/malaysia_gamelan.mp3',
+      fallbackSrc: '../assets/audio/malaysia_gamelan.wav'
     },
     {
       id: 'africa_djembe',
@@ -33,8 +33,8 @@
       genre: 'Ancestral Rhythms & Polyphony',
       duration: 180,
       photo: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=300&q=80',
-      src: './assets/audio/africa_djembe.mp3',
-      fallbackSrc: './assets/audio/africa_djembe.wav'
+      src: '../assets/audio/africa_djembe.mp3',
+      fallbackSrc: '../assets/audio/africa_djembe.wav'
     },
     {
       id: 'japan_taiko',
@@ -43,8 +43,8 @@
       genre: 'Matsuri Festival Percussion',
       duration: 155,
       photo: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=300&q=80',
-      src: './assets/audio/japan_taiko.mp3',
-      fallbackSrc: './assets/audio/japan_taiko.wav'
+      src: '../assets/audio/japan_taiko.mp3',
+      fallbackSrc: '../assets/audio/japan_taiko.wav'
     }
   ];
 

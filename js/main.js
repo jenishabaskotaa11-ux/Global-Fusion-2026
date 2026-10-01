@@ -181,11 +181,11 @@
           const src = (img.src || '').toLowerCase();
           
           if (alt.includes('food') || alt.includes('momo') || alt.includes('satay') || alt.includes('ramen') || alt.includes('culinary') || alt.includes('taste') || alt.includes('dish') || alt.includes('jollof') || alt.includes('nasi') || alt.includes('biryani')) {
-            img.src = './assets/images/fallbacks/food_fallback.svg';
+            img.src = '../assets/images/fallbacks/food_fallback.svg';
           } else if (alt.includes('dance') || alt.includes('taiko') || alt.includes('lakhey') || alt.includes('kimono') || alt.includes('sarangi') || alt.includes('kathak') || alt.includes('gamelan') || alt.includes('samba') || alt.includes('djembe') || alt.includes('batik') || alt.includes('culture') || alt.includes('pavilion')) {
-            img.src = './assets/images/fallbacks/cultural_fallback.svg';
+            img.src = '../assets/images/fallbacks/cultural_fallback.svg';
           } else {
-            img.src = './assets/images/fallbacks/festival_fallback.svg';
+            img.src = '../assets/images/fallbacks/festival_fallback.svg';
           }
           img.style.objectFit = 'cover';
         }

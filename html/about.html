@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Global Fusion 2026 — LBEF &amp; APU Academic Collaboration</title>
+    <meta name="description" content="Discover the story, academic partnership, and student mission behind Global Fusion 2026." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+  </head>
+  <body>
+    <!-- Institutional Strip -->
+    <aside class="top-collab-strip" aria-label="Institutional Collaboration Info">
+      <div class="collab-left">
+        <img src="../assets/images/branding/lbef_apu_logo.svg" alt="LBEF College &amp; APU Logo" class="logo-img" />
+      </div>
+      <div class="collab-right">
+        <span>📍 LBEF Campus Grounds, Kathmandu</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>🗓️ 3–5 December 2026</span>
+      </div>
+    </aside>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-link" aria-label="Global Fusion 2026 Home">
+          <img src="../assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" class="brand-logo-img" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+            <div class="dropdown-menu">
+              <a href="cultures.html" class="dropdown-item">🌍 Explore Cultures</a>
+              <a href="activities.html" class="dropdown-item">🎨 Activities &amp; Workshops</a>
+              <a href="quiz.html" class="dropdown-item">❓ Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Events ▾</button>
+            <div class="dropdown-menu">
+              <a href="schedule.html" class="dropdown-item">📅 Master Schedule</a>
+              <a href="competitions.html" class="dropdown-item">🏆 Competitions</a>
+              <a href="activities.html" class="dropdown-item">🎭 Stage Showcases</a>
+            </div>
+          </div>
+          <a href="schedule.html" class="nav-link">Schedule</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Resources ▾</button>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-item">📥 Downloads &amp; Guides</a>
+              <a href="news.html" class="dropdown-item">📰 News &amp; Bulletins</a>
+              <a href="faq.html" class="dropdown-item">💡 FAQ</a>
+              <a href="contact.html" class="dropdown-item">✉️ Contact Us</a>
+              <a href="feedback.html" class="dropdown-item">⭐ Feedback Survey</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link active">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="passport-quick-btn" data-open-passport title="View Your Passport">
+            <span>🛂 Passport</span>
+            <span class="passport-stamp-counter">1/6</span>
+          </button>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+          </button>
+          <a href="dashboard.html" class="btn-secondary" style="font-size:0.82rem; padding:0.45rem 1rem;">Dashboard</a>
+          <a href="registration.html" class="btn-primary">GET YOUR PASS &rarr;</a>
+          <button class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog">
+      <div class="mobile-nav-header">
+        <img src="../assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:36px;" />
+        <button id="mobile-menu-close-btn" style="font-size:1.8rem;">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Global Fusion</a>
+        <a href="cultures.html">Explore Cultures</a>
+        <a href="schedule.html">Event Schedule</a>
+        <a href="activities.html">Activities &amp; Workshops</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="quiz.html">Cultural Quiz</a>
+        <a href="gallery.html">Gallery &amp; Media</a>
+        <a href="resources.html">Resources</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="dashboard.html">Participant Dashboard</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Page Hero -->
+      <section style="background: radial-gradient(circle at 50% 30%, #162447 0%, #070B18 100%); color:#fff; padding:5rem 1.5rem 4rem; text-align:center;">
+        <div class="container" style="max-width:850px;">
+          <span class="hero-badge">OUR STORY &bull; ACADEMIC COLLABORATION</span>
+          <h1 style="font-family:var(--font-display); font-size:clamp(2.4rem, 5vw, 4rem); font-weight:900; line-height:1.1; margin-bottom:1rem;">
+            BRINGING THE WORLD TO KATHMANDU
+          </h1>
+          <p style="font-size:1.2rem; color:#CBD5E1; line-height:1.6;">
+            “One Campus. Many Cultures. One Global Experience.”<br />
+            An immersive festival where student creativity bridges geographical boundaries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Institutional Partnership Spotlight -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+          <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:3.5rem; box-shadow:var(--shadow-lg);">
+            <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:3rem; align-items:center;">
+              <div>
+                <span class="section-kicker">INSTITUTIONAL PARTNERSHIP</span>
+                <h2 style="font-family:var(--font-display); font-size:2.2rem; font-weight:900; line-height:1.15; margin-bottom:1.25rem;">
+                  LBEF College &amp; Asia Pacific University of Technology &amp; Innovation (APU)
+                </h2>
+                <p style="font-size:1rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1.25rem;">
+                  Established in 1998, <strong>Lord Buddha Education Foundation (LBEF)</strong> stands proudly as the First IT College of Nepal, having nurtured over 12,000 technology and management professionals.
+                </p>
+                <p style="font-size:1rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1.75rem;">
+                  In longstanding academic collaboration with <strong>Asia Pacific University of Technology &amp; Innovation (APU, Malaysia)</strong> &mdash; one of Malaysia's premier Premier Digital Tech Institutions hosting students from over 130 countries &mdash; this festival represents the zenith of cross-border collegiate solidarity.
+                </p>
+                <div style="background:var(--bg-secondary); border-left:4px solid var(--color-coral); padding:1rem 1.25rem; border-radius:var(--radius-md); font-size:0.88rem; color:var(--text-secondary);">
+                  <strong>Note:</strong> Global Fusion 2026 is a creative fictional student demonstration project crafted for front-end web development academic requirements.
+                </div>
+              </div>
+
+              <div style="text-align:center;">
+                <div style="background:#FFFFFF; padding:2rem; border-radius:var(--radius-xl); border:1px solid var(--border-medium); box-shadow:var(--shadow-md); margin-bottom:1.5rem;">
+                  <img src="../assets/images/branding/lbef_apu_logo.svg" alt="LBEF APU Official Academic Collaboration Logo" style="width:100%; height:auto;" />
+                </div>
+                <div style="display:flex; justify-content:center; gap:1rem;">
+                  <span style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">🇳🇵 Kathmandu, Nepal</span>
+                  <span aria-hidden="true">&bull;</span>
+                  <span style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">🇲🇾 Kuala Lumpur, Malaysia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Pillars Grid -->
+      <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+          <div style="text-align:center; max-width:700px; margin:0 auto 3.5rem;">
+            <span class="section-kicker">CORE PILLARS</span>
+            <h2 class="section-title">WHAT DRIVES GLOBAL FUSION</h2>
+            <p class="section-lead">Four guiding philosophies shaping every exhibition, pavilion, and performance on campus.</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2rem;">
+              <div style="font-size:2.5rem; margin-bottom:1rem;">🌍</div>
+              <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.3rem; margin-bottom:0.6rem; color:var(--color-coral);">
+                Multicultural Empathy
+              </h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">
+                Transforming textbook geography into living sensory experiences through authentic food, native instruments, and respectful traditional folklore.
+              </p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2rem;">
+              <div style="font-size:2.5rem; margin-bottom:1rem;">💡</div>
+              <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.3rem; margin-bottom:0.6rem; color:var(--color-orange);">
+                Tech &amp; Heritage Fusion
+              </h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">
+                Leveraging digital innovation, digital passports, UI/UX preservation hackathons, and virtual broadcasting to celebrate ancestral roots.
+              </p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2rem;">
+              <div style="font-size:2.5rem; margin-bottom:1rem;">🤝</div>
+              <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.3rem; margin-bottom:0.6rem; color:var(--color-turquoise);">
+                Student Leadership
+              </h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">
+                100% student-curated and executed. From culinary chefs to stage sound engineers, youth leadership is the beating heart of Global Fusion.
+              </p>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2rem;">
+              <div style="font-size:2.5rem; margin-bottom:1rem;">🕊️</div>
+              <h3 style="font-family:var(--font-display); font-weight:800; font-size:1.3rem; margin-bottom:0.6rem; color:var(--color-purple);">
+                Unity In Diversity
+              </h3>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">
+                Creating a safe, inclusive festival ground where differences in language, faith, and customs become celebrations of collective humanity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Leadership Team Preview -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+          <div style="text-align:center; max-width:700px; margin:0 auto 3.5rem;">
+            <span class="section-kicker">THE ORGANIZERS</span>
+            <h2 class="section-title">MEET OUR FESTIVAL DIRECTORS</h2>
+            <p class="section-lead">Student committee chairs steering the creative, technical, and diplomatic coordination.</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2rem;">
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); overflow:hidden; text-align:center;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Festival Director" style="height:220px; width:100%; object-fit:cover;" />
+              <div style="padding:1.5rem;">
+                <h4 style="font-family:var(--font-display); font-weight:800; font-size:1.15rem;">Aaradhya Thapa</h4>
+                <p style="font-size:0.8rem; color:var(--color-coral); font-weight:700; margin-bottom:0.5rem;">President &bull; Festival Lead</p>
+                <small style="color:var(--text-muted);">BSc (Hons) IT, LBEF College</small>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); overflow:hidden; text-align:center;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="APU Liaison" style="height:220px; width:100%; object-fit:cover;" />
+              <div style="padding:1.5rem;">
+                <h4 style="font-family:var(--font-display); font-weight:800; font-size:1.15rem;">Farhan Bin Azman</h4>
+                <p style="font-size:0.8rem; color:var(--color-turquoise); font-weight:700; margin-bottom:0.5rem;">APU Malaysia Student Liaison</p>
+                <small style="color:var(--text-muted);">Software Engineering, APU</small>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); overflow:hidden; text-align:center;">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Cultural Director" style="height:220px; width:100%; object-fit:cover;" />
+              <div style="padding:1.5rem;">
+                <h4 style="font-family:var(--font-display); font-weight:800; font-size:1.15rem;">Kriti Bajracharya</h4>
+                <p style="font-size:0.8rem; color:var(--color-orange); font-weight:700; margin-bottom:0.5rem;">Director of Cultural Pavilions</p>
+                <small style="color:var(--text-muted);">Newari Heritage Society, LBEF</small>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); overflow:hidden; text-align:center;">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Culinary Coordinator" style="height:220px; width:100%; object-fit:cover;" />
+              <div style="padding:1.5rem;">
+                <h4 style="font-family:var(--font-display); font-weight:800; font-size:1.15rem;">Kalu Chukwu</h4>
+                <p style="font-size:0.8rem; color:var(--color-purple); font-weight:700; margin-bottom:0.5rem;">Global Food Street Coordinator</p>
+                <small style="color:var(--text-muted);">International Scholars Guild</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section style="background:linear-gradient(135deg, var(--color-coral), var(--color-orange)); color:#fff; padding:4rem 1.5rem; text-align:center;">
+        <div class="container">
+          <h2 style="font-family:var(--font-display); font-size:2.4rem; font-weight:900; margin-bottom:1rem;">BE PART OF THE EXPEDITION</h2>
+          <p style="font-size:1.1rem; max-width:650px; margin:0 auto 2rem; opacity:0.95;">
+            Registration is 100% free for all students, staff, and external delegates. Secure your pass in seconds.
+          </p>
+          <a href="registration.html" class="btn-secondary" style="font-size:1rem; padding:0.85rem 2rem; color:#101A3A;">
+            GET YOUR GLOBAL PASS NOW &rarr;
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-disclaimer">
+          <strong>Academic Collaboration Disclaimer:</strong> Global Fusion 2026 is a fictional event concept created for an academic student web development project by LBEF College in collaboration with Asia Pacific University of Technology &amp; Innovation (APU).
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img src="../assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:44px;" />
+            <p>“One Campus. Many Cultures. One Global Experience.”</p>
+            <div class="footer-logo-collab">
+              <img src="../assets/images/branding/lbef_apu_logo.svg" alt="LBEF APU Collaboration" style="width:100%; height:auto;" />
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Global Fusion</a>
+              <a href="schedule.html">Festival Schedule</a>
+              <a href="gallery.html">Multimedia Gallery</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <div class="footer-links">
+              <a href="cultures.html">Explore Cultures</a>
+              <a href="activities.html">Activities &amp; Stalls</a>
+              <a href="competitions.html">NRs 350k Competitions</a>
+              <a href="quiz.html">Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Participant</h4>
+            <div class="footer-links">
+              <a href="registration.html">Get Your Pass</a>
+              <a href="dashboard.html">Participant Dashboard</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Global Fusion Student Committee. Fictional Academic Project.</div>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="color:var(--color-orange); font-weight:700;">Back to Top &uarr;</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/theme.js?v=20261001-html-folder"></script>
+    <script src="../js/passport.js?v=20261001-html-folder"></script>
+    <script src="../js/main.js?v=20261001-html-folder"></script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Cultures — Global Fusion 2026</title>
+    <meta name="description" content="Discover 12 featured world cultures, living traditions, authentic food, attire, and collect digital passport stamps." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+  </head>
+  <body>
+    <!-- Institutional Strip -->
+    <aside class="top-collab-strip" aria-label="Institutional Collaboration Info">
+      <div class="collab-left">
+        <img src="../assets/images/branding/lbef_apu_logo.svg" alt="LBEF College &amp; APU Logo" class="logo-img" />
+      </div>
+      <div class="collab-right">
+        <span>📍 LBEF Campus Grounds, Kathmandu</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>🗓️ 3–5 December 2026</span>
+      </div>
+    </aside>
+
+    <!-- Global Header -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-link" aria-label="Global Fusion 2026 Home">
+          <img src="../assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" class="brand-logo-img" />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link active" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+            <div class="dropdown-menu">
+              <a href="cultures.html" class="dropdown-item">🌍 Explore Cultures</a>
+              <a href="activities.html" class="dropdown-item">🎨 Activities &amp; Workshops</a>
+              <a href="quiz.html" class="dropdown-item">❓ Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Events ▾</button>
+            <div class="dropdown-menu">
+              <a href="schedule.html" class="dropdown-item">📅 Master Schedule</a>
+              <a href="competitions.html" class="dropdown-item">🏆 Competitions</a>
+              <a href="activities.html" class="dropdown-item">🎭 Stage Showcases</a>
+            </div>
+          </div>
+          <a href="schedule.html" class="nav-link">Schedule</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <div class="nav-item-dropdown">
+            <button class="nav-link" aria-haspopup="true" aria-expanded="false">Resources ▾</button>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-item">📥 Downloads &amp; Guides</a>
+              <a href="news.html" class="dropdown-item">📰 News &amp; Bulletins</a>
+              <a href="faq.html" class="dropdown-item">💡 FAQ</a>
+              <a href="contact.html" class="dropdown-item">✉️ Contact Us</a>
+              <a href="feedback.html" class="dropdown-item">⭐ Feedback Survey</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="passport-quick-btn" data-open-passport title="View Your Passport">
+            <span>🛂 Passport</span>
+            <span class="passport-stamp-counter">1/6</span>
+          </button>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+          </button>
+          <a href="dashboard.html" class="btn-secondary" style="font-size:0.82rem; padding:0.45rem 1rem;">Dashboard</a>
+          <a href="registration.html" class="btn-primary">GET YOUR PASS &rarr;</a>
+          <button class="mobile-menu-btn" id="mobile-menu-open-btn" aria-label="Open Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog">
+      <div class="mobile-nav-header">
+        <img src="../assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:36px;" />
+        <button id="mobile-menu-close-btn" style="font-size:1.8rem;">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Global Fusion</a>
+        <a href="cultures.html" class="active">Explore Cultures</a>
+        <a href="schedule.html">Event Schedule</a>
+        <a href="activities.html">Activities &amp; Workshops</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="quiz.html">Cultural Quiz</a>
+        <a href="gallery.html">Gallery &amp; Media</a>
+        <a href="dashboard.html">Participant Dashboard</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- Hero Header -->
+      <section style="background: radial-gradient(circle at 50% 30%, #162447 0%, #070B18 100%); color:#fff; padding:5rem 1.5rem 3.5rem; text-align:center;">
+        <div class="container" style="max-width:850px;">
+          <span class="hero-badge">DIGITAL PASSPORT EXPEDITION</span>
+          <h1 style="font-family:var(--font-display); font-size:clamp(2.4rem, 5vw, 4rem); font-weight:900; line-height:1.1; margin-bottom:1rem;">
+            EXPLORE WORLD CULTURES
+          </h1>
+          <p style="font-size:1.15rem; color:#CBD5E1; line-height:1.6;">
+            Immerse yourself in living history, native languages, food traditions, and royal garments. Click any culture to explore deeper and collect its official Digital Passport Stamp!
+          </p>
+
+          <!-- Passport Tracker Bar Banner -->
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-xl); padding:1rem 1.75rem; margin-top:2rem; display:inline-flex; align-items:center; gap:1.25rem; flex-wrap:wrap; justify-content:center;">
+            <span style="font-size:0.9rem; font-weight:700;">🛂 Passport Challenge Progress:</span>
+            <span class="passport-stamp-counter" style="font-size:0.85rem; padding:0.25rem 0.6rem;">1/6</span>
+            <button class="btn-primary" data-open-passport style="font-size:0.8rem; padding:0.4rem 1rem;">
+              Open Passport &rarr;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search & Region Filters -->
+      <section style="background-color: var(--bg-secondary); border-bottom:1px solid var(--border-light); padding:1.5rem 0;">
+        <div class="container">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <!-- Filter Tabs -->
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" role="tablist" aria-label="Region Filters">
+              <button class="btn-secondary active" data-culture-filter="all" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                All Cultures (12)
+              </button>
+              <button class="btn-secondary" data-culture-filter="south-asia" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                South Asia
+              </button>
+              <button class="btn-secondary" data-culture-filter="asean" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                ASEAN
+              </button>
+              <button class="btn-secondary" data-culture-filter="east-asia" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                East Asia
+              </button>
+              <button class="btn-secondary" data-culture-filter="americas" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                The Americas
+              </button>
+              <button class="btn-secondary" data-culture-filter="africa" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                Africa
+              </button>
+              <button class="btn-secondary" data-culture-filter="europe" style="font-size:0.85rem; padding:0.5rem 1.1rem;">
+                Europe
+              </button>
+            </div>
+
+            <!-- Search input -->
+            <div style="min-width:280px; position:relative;">
+              <input
+                type="text"
+                id="culture-search-input"
+                placeholder="Search country, pavilion, keyword..."
+                style="width:100%; padding:0.6rem 1rem 0.6rem 2.4rem; border-radius:var(--radius-full); border:1px solid var(--border-medium); background:var(--bg-card); color:var(--text-primary); font-size:0.88rem;"
+              />
+              <span style="position:absolute; left:0.85rem; top:50%; transform:translateY(-50%); font-size:0.9rem; opacity:0.6;">🔍</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cultures Grid -->
+      <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+          <div class="pavilions-grid" id="cultures-grid">
+            <!-- Dynamic JavaScript Render via GFCultures.renderCultureCards() -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Universal Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-disclaimer">
+          <strong>Academic Collaboration Disclaimer:</strong> Global Fusion 2026 is a fictional event concept created for an academic student web development project by LBEF College in collaboration with Asia Pacific University of Technology &amp; Innovation (APU).
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <img src="../assets/images/branding/global_fusion_logo.svg" alt="Global Fusion 2026" style="height:44px;" />
+            <p>“One Campus. Many Cultures. One Global Experience.”</p>
+            <div class="footer-logo-collab">
+              <img src="../assets/images/branding/lbef_apu_logo.svg" alt="LBEF APU Collaboration" style="width:100%; height:auto;" />
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Global Fusion</a>
+              <a href="schedule.html">Festival Schedule</a>
+              <a href="gallery.html">Multimedia Gallery</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <div class="footer-links">
+              <a href="cultures.html">Explore Cultures</a>
+              <a href="activities.html">Activities &amp; Stalls</a>
+              <a href="competitions.html">Competitions</a>
+              <a href="quiz.html">Cultural Quiz</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Participant</h4>
+            <div class="footer-links">
+              <a href="registration.html">Get Your Pass</a>
+              <a href="dashboard.html">Participant Dashboard</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Global Fusion Student Committee. Fictional Academic Project.</div>
+          <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="color:var(--color-orange); font-weight:700;">Back to Top &uarr;</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/theme.js?v=20261001-html-folder"></script>
+    <script src="../js/passport.js?v=20261001-html-folder"></script>
+    <script src="../js/cultures.js?v=20261001-html-folder"></script>
+    <script src="../js/main.js?v=20261001-html-folder"></script>
+  </body>
+</html>
