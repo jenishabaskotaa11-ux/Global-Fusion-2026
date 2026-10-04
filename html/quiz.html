@@ -13,7 +13,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css?v=20261004-responsive" />
     <link rel="stylesheet" href="../css/animations.css" />
   </head>
   <body>
@@ -125,7 +125,7 @@
         <div class="container" style="max-width:780px;">
 
           <!-- Active Question Box -->
-          <div id="quiz-active-box" style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2.5rem; box-shadow:var(--shadow-lg);">
+          <div class="responsive-card" id="quiz-active-box" style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2.5rem; box-shadow:var(--shadow-lg);">
             
             <!-- Progress & Timer Bar -->
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
@@ -154,7 +154,7 @@
             </h2>
 
             <!-- Options Grid -->
-            <div id="quiz-options-grid" style="display:grid; grid-template-columns:1fr; gap:0.85rem; margin-bottom:2rem;">
+            <div class="responsive-grid" id="quiz-options-grid" style="display:grid; grid-template-columns:1fr; gap:0.85rem; margin-bottom:2rem;">
               <!-- Dynamic Options -->
             </div>
 
@@ -172,7 +172,7 @@
           </div>
 
           <!-- Results Box (Initially Hidden) -->
-          <div id="quiz-results-box" style="display:none; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:3.5rem 2.5rem; text-align:center; box-shadow:var(--shadow-lg);">
+          <div class="responsive-card" id="quiz-results-box" style="display:none; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:3.5rem 2.5rem; text-align:center; box-shadow:var(--shadow-lg);">
             <div style="font-size:4rem; margin-bottom:1rem;">🏆</div>
             <span id="quiz-tier-badge" class="hero-badge" style="background:linear-gradient(135deg, var(--color-coral), var(--color-orange)); color:#fff; border:none; margin-bottom:1rem;">
               🌟 Tier Badge

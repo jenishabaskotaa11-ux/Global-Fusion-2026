@@ -13,7 +13,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css?v=20261004-responsive" />
     <link rel="stylesheet" href="../css/animations.css" />
 
     <style>
@@ -219,7 +219,7 @@
       <!-- Multi-step Form Wizard Section -->
       <section class="section" style="background-color: var(--bg-primary);">
         <div class="container" style="max-width:760px;">
-          <div id="registration-wizard-card" style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:3rem 2.5rem; box-shadow:var(--shadow-lg);">
+          <div class="responsive-card" id="registration-wizard-card" style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:3rem 2.5rem; box-shadow:var(--shadow-lg);">
 
             <!-- Step Progress Indicator -->
             <div class="step-progress-bar" aria-label="Registration Progress">
@@ -246,7 +246,7 @@
                   <div id="reg-name-error" class="inline-err-msg">Full name is required.</div>
                 </div>
 
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                   <div>
                     <label for="reg-student-id" style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.4rem;">
                       Student / Delegate ID (optional)
@@ -270,7 +270,7 @@
                   </div>
                 </div>
 
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                   <div>
                     <label for="reg-email" style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.4rem;">
                       Email Address <span style="color:var(--color-coral);">*</span>
@@ -353,7 +353,7 @@
                 <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.6rem;">
                   Activities You Intend To Experience (Select all that apply):
                 </label>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; font-size:0.85rem;">
+                <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; font-size:0.85rem;">
                   <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
                     <input type="checkbox" name="reg_activity" value="Global Food Street" checked />
                     Global Food Street &amp; Stalls
@@ -494,7 +494,7 @@
                   </div>
                 </div>
 
-                <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; border-top:1px solid rgba(255,255,255,0.15); padding-top:1rem; margin-bottom:1.5rem; font-size:0.8rem;">
+                <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; border-top:1px solid rgba(255,255,255,0.15); padding-top:1rem; margin-bottom:1.5rem; font-size:0.8rem;">
                   <div>
                     <span style="color:#94A3B8; display:block;">DATES</span>
                     <strong>3–5 Dec 2026</strong>

@@ -215,3 +215,50 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+/* Keep desktop styling intact; adapt fixed layouts only on smaller screens. */
+@media screen and (max-width: 1200px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-btn { display: flex; }
+  .header-inner { gap: 1rem; }
+}
+@media screen and (max-width: 992px) {
+  .responsive-split { grid-template-columns: minmax(0, 1fr) !important; gap: 1.5rem !important; }
+  .responsive-grid > *, .responsive-split > * { min-width: 0; }
+  .header-inner { height: auto; min-height: 72px; flex-wrap: wrap; padding-block: 0.75rem; }
+  .header-actions { flex-wrap: wrap; gap: 0.6rem; }
+}
+@media screen and (max-width: 768px) {
+  main div[style*="grid-template-columns"],
+  .responsive-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 1rem !important; }
+  .responsive-card { padding: 1.5rem !important; }
+  main [style*="display:flex"], main [style*="display: flex"] { flex-wrap: wrap; }
+  main :is(input, select, textarea) { max-width: 100%; min-width: 0; }
+  main :is(h1, h2, h3, p, strong, a, label) { overflow-wrap: anywhere; }
+  .container, .header-inner > *, .sounds-grid > *, .footer-grid > * { min-width: 0; }
+  .hero-actions { flex-wrap: wrap; }
+  .hero-actions > * { max-width: 100%; }
+  .footer-bottom > div { flex-wrap: wrap; justify-content: center; }
+  #quiz-active-box, #quiz-results-box, #registration-wizard-card,
+  .digital-pass-card, .venue-info-card { padding: 1.25rem !important; }
+  #reg-nav-controls { gap: 0.75rem; flex-wrap: wrap; }
+  #quiz-options-grid button { padding: 0.85rem !important; align-items: flex-start !important; }
+  .passport-modal-backdrop { padding: 0.75rem; overflow-y: auto; }
+  .passport-booklet, #video-modal > div { max-width: 100%; max-height: 90dvh; overflow-y: auto; }
+  .step-progress-bar { gap: 0.25rem; }
+  .step-node { flex-shrink: 0; width: 36px; height: 36px; }
+  .step-progress-bar::before { top: 17px; }
+}
+@media screen and (max-width: 480px) {
+  .header-inner { justify-content: center; gap: 0.75rem; }
+  .header-actions { width: 100%; justify-content: center; gap: 0.5rem; }
+  .brand-logo-img { max-width: 100%; height: 36px; }
+  .header-actions .btn-secondary { padding: 0.45rem 0.65rem !important; }
+  .responsive-card { padding: 1.1rem !important; }
+  main :is(input, select, textarea) { font-size: 16px !important; }
+  .rating-star { min-width: 0; }
+}
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .mobile-nav-drawer, .passport-modal-backdrop { overflow-y: auto; }
+  .passport-booklet, #video-modal > div { max-height: 85dvh; overflow-y: auto; }
+}

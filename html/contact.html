@@ -13,7 +13,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css?v=20261004-responsive" />
     <link rel="stylesheet" href="../css/animations.css" />
     
     <style>
@@ -166,7 +166,7 @@
       <!-- Contact Info & Form Section -->
       <section class="section" style="background-color: var(--bg-primary);">
         <div class="container">
-          <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:3.5rem; align-items:flex-start;">
+          <div class="responsive-grid responsive-split" style="display:grid; grid-template-columns:1fr 1.3fr; gap:3.5rem; align-items:flex-start;">
 
             <!-- Left Info Column -->
             <div>
@@ -227,13 +227,13 @@
             </div>
 
             <!-- Right: Interactive Contact Form -->
-            <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2.5rem; box-shadow:var(--shadow-lg);">
+            <div class="responsive-card" style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:2.5rem; box-shadow:var(--shadow-lg);">
               
               <!-- Status Banner -->
               <div id="contact-status-box" style="display:none;"></div>
 
               <form id="contact-form">
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem;">
+                <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem;">
                   <div>
                     <label for="contact-name" style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">
                       Your Name <span style="color:var(--color-coral);">*</span>
@@ -251,7 +251,7 @@
                   </div>
                 </div>
 
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem;">
+                <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem;">
                   <div>
                     <label for="contact-category" style="display:block; font-size:0.85rem; font-weight:700; margin-bottom:0.4rem;">
                       Inquiry Category

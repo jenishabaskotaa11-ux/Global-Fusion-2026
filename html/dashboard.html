@@ -13,7 +13,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css?v=20261004-responsive" />
     <link rel="stylesheet" href="../css/animations.css" />
     
     <style>
@@ -158,7 +158,7 @@
         <div class="container" style="max-width:1100px;">
 
           <!-- EMPTY STATE (Shown if no pass in localStorage) -->
-          <div id="dash-empty-view" style="display:none; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:4rem 2.5rem; text-align:center; box-shadow:var(--shadow-lg); margin-bottom:3rem;">
+          <div class="responsive-card" id="dash-empty-view" style="display:none; background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-xl); padding:4rem 2.5rem; text-align:center; box-shadow:var(--shadow-lg); margin-bottom:3rem;">
             <div style="font-size:4rem; margin-bottom:1rem;">🎟️</div>
             <h2 style="font-family:var(--font-display); font-size:2rem; font-weight:900; margin-bottom:0.75rem;">
               No Delegate Pass Registered Yet
@@ -178,7 +178,7 @@
 
           <!-- REGISTERED VIEW (Shown if pass exists) -->
           <div id="dash-registered-view" style="display:none;">
-            <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:2.5rem; align-items:flex-start;">
+            <div class="responsive-grid responsive-split" style="display:grid; grid-template-columns:1.2fr 1fr; gap:2.5rem; align-items:flex-start;">
               
               <!-- Left Column: Digital Pass & Quick Actions -->
               <div>
@@ -213,7 +213,7 @@
                     </div>
                   </div>
 
-                  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; border-top:1px solid rgba(255,255,255,0.15); padding-top:1rem; margin-bottom:1.5rem; font-size:0.82rem;">
+                  <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; border-top:1px solid rgba(255,255,255,0.15); padding-top:1rem; margin-bottom:1.5rem; font-size:0.82rem;">
                     <div>
                       <span style="color:#94A3B8; display:block; font-size:0.75rem; text-transform:uppercase;">EVENT DATES</span>
                       <strong style="color:#fff;">3–5 Dec 2026</strong>
@@ -339,7 +339,7 @@
             </div>
 
             <!-- Empty Notice -->
-            <div id="dash-schedule-empty" style="text-align:center; padding:3rem 1.5rem; color:var(--text-muted);">
+            <div class="responsive-card" id="dash-schedule-empty" style="text-align:center; padding:3rem 1.5rem; color:var(--text-muted);">
               <div style="font-size:2.5rem; margin-bottom:0.75rem;">📅</div>
               <h4 style="font-size:1.15rem; font-weight:800; color:var(--text-primary); margin-bottom:0.35rem;">No Events Added Yet</h4>
               <p style="font-size:0.9rem; max-width:480px; margin:0 auto 1.5rem;">
@@ -385,7 +385,7 @@
               <div id="edit-err-name" class="field-error-msg" style="color:var(--color-coral); font-size:0.78rem; font-weight:600; margin-top:0.3rem; display:none;"></div>
             </div>
 
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
               <div class="form-group">
                 <label for="edit-profile-studentid" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
                   Student ID <span style="color:var(--color-coral);">*</span>
@@ -403,7 +403,7 @@
               </div>
             </div>
 
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="responsive-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
               <div class="form-group">
                 <label for="edit-profile-email" style="display:block; font-weight:700; font-size:0.88rem; color:var(--text-primary); margin-bottom:0.35rem;">
                   Email <span style="color:var(--color-coral);">*</span>
