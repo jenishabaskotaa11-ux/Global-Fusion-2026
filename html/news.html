@@ -156,7 +156,7 @@
                   LBEF celebrated Teej with traditional red attire, songs, dances and activities including musical chairs and a mehndi competition. A shared lunch rounded off the occasion, bringing colleagues together through Nepal’s living cultural traditions. Source: <a href="https://lbef.org/assets/lbefconnect/pdf/vol-8-issue-3.pdf" target="_blank" rel="noopener noreferrer">LBEF Connect, Vol. 8, Issue 3</a>.
                 </p>
                 <div class="pavilion-card-footer">
-                  <a href="registration.html" class="pavilion-explore-btn">Explore Cultures &rarr;</a>
+                  <a href="news-article.html?story=teej-celebration" class="pavilion-explore-btn">Read More &rarr;</a>
                 </div>
               </div>
             </article>
@@ -176,7 +176,7 @@
                   LBEF’s festival message highlighted Udhauli Parva and Yomari Punhi, recognising traditions that connect food, faith and community. Its description of Yomari Punhi honoured Annapurna, the deity of food—a fitting reminder of the cultural stories behind every festival dish. Source: <a href="https://www.linkedin.com/posts/lbefcampus_udhauliparva-yomaripunhi-nepal-activity-7145281713408061440-nHok" target="_blank" rel="noopener noreferrer">LBEF College’s official festival post</a>.
                 </p>
                 <div class="pavilion-card-footer">
-                  <a href="activities.html" class="pavilion-explore-btn">Explore Food &amp; Activities &rarr;</a>
+                  <a href="news-article.html?story=yomari-punhi" class="pavilion-explore-btn">Read More &rarr;</a>
                 </div>
               </div>
             </article>
@@ -196,7 +196,7 @@
                   LBEF’s Student Representative Council organised “A Step Towards Humanity” around Saraswati Puja. Members visited Pranavananda Ashram Nepal in Guheshwori and donated stationery, supported by contributions from the college community. Source: <a href="https://lbef.org/assets/lbefconnect/pdf/vol-7-issue-1.pdf" target="_blank" rel="noopener noreferrer">LBEF Connect, Vol. 7, Issue 1</a>.
                 </p>
                 <div class="pavilion-card-footer">
-                  <a href="about.html" class="pavilion-explore-btn">Meet Our Team &rarr;</a>
+                  <a href="news-article.html?story=step-towards-humanity" class="pavilion-explore-btn">Read More &rarr;</a>
                 </div>
               </div>
             </article>
@@ -216,7 +216,7 @@
                   Six teams from LBEF’s business and technology programmes took part in a business quiz featuring five rounds and 50 questions. The competition encouraged general knowledge and awareness of the corporate world, with participation certificates presented the following month. Source: <a href="https://www.lbef.org/assets/lbefconnect/pdf/vol-2-issue-1.pdf" target="_blank" rel="noopener noreferrer">LBEF Connect, Vol. 2, Issue 1</a>.
                 </p>
                 <div class="pavilion-card-footer">
-                  <a href="competitions.html" class="pavilion-explore-btn">Explore Competitions &rarr;</a>
+                  <a href="news-article.html?story=business-quiz" class="pavilion-explore-btn">Read More &rarr;</a>
                 </div>
               </div>
             </article>
@@ -236,7 +236,7 @@
                   LBEF’s campus newsletter recorded a Holi celebration on the E-Block grounds, bringing students, staff and faculty together for the festival of colours. The gathering reflected the shared joy and community spirit that make cultural celebrations a memorable part of campus life. Source: <a href="https://lbef.org/assets/lbefconnect/pdf/vol-7-issue-1.pdf" target="_blank" rel="noopener noreferrer">LBEF Connect, Vol. 7, Issue 1</a>.
                 </p>
                 <div class="pavilion-card-footer">
-                  <a href="faq.html" class="pavilion-explore-btn">Festival Information &rarr;</a>
+                  <a href="news-article.html?story=holi-celebration" class="pavilion-explore-btn">Read More &rarr;</a>
                 </div>
               </div>
             </article>
@@ -330,6 +330,27 @@
       if (searchInput) {
         searchInput.addEventListener('input', filterNews);
       }
+      // Keep search and category when returning from a full article.
+      const newsParams = new URLSearchParams(window.location.search);
+      const savedCategory = newsParams.get('category');
+      const savedFilter = Array.from(filterBtns).find(btn => btn.getAttribute('data-category') === savedCategory);
+      if (savedFilter) {
+        filterBtns.forEach(btn => btn.classList.remove('active'));
+        savedFilter.classList.add('active');
+      }
+      if (searchInput && newsParams.has('search')) searchInput.value = newsParams.get('search');
+      filterNews();
+      document.querySelectorAll('.news-card .pavilion-explore-btn').forEach(link => {
+        link.addEventListener('click', () => {
+          const target = new URL(link.href, window.location.href);
+          const active = document.querySelector('.news-filter-btn.active');
+          target.searchParams.set('category', active ? active.getAttribute('data-category') : 'all');
+          if (searchInput && searchInput.value) target.searchParams.set('search', searchInput.value);
+          else target.searchParams.delete('search');
+          link.href = target.href;
+        });
+      });
+
     </script>
   </body>
 </html>
