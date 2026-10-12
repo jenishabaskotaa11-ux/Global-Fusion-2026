@@ -8,9 +8,10 @@
   // EMAILJS CONFIGURATION CONSTANTS
   // Replace these placeholder strings with your actual EmailJS credentials
   // =========================================================================
-  const EMAILJS_PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY'; // e.g. "user_xxxxxxxxxxxx"
-  const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID'; // e.g. "service_xxxxxxx"
-  const EMAILJS_TEMPLATE_ID = 'YOUR_EMAILJS_TEMPLATE_ID'; // e.g. "template_xxxxxxx"
+  const config = window.GFEmailConfig || {};
+  const EMAILJS_PUBLIC_KEY = config.publicKey || 'YOUR_EMAILJS_PUBLIC_KEY';
+  const EMAILJS_SERVICE_ID = config.serviceId || 'YOUR_EMAILJS_SERVICE_ID';
+  const EMAILJS_TEMPLATE_ID = config.notificationTemplateId || 'YOUR_EMAILJS_TEMPLATE_ID';
 
   function isEmailJSConfigured() {
     return (
@@ -22,6 +23,7 @@
 
   function handleContactSubmit(e) {
     e.preventDefault();
+    if (document.getElementById('contact-submit-btn')?.disabled) return;
 
     const nameInput = document.getElementById('contact-name');
     const emailInput = document.getElementById('contact-email');
@@ -78,19 +80,24 @@
     const templateParams = {
       from_name: nameInput.value.trim(),
       from_email: emailInput.value.trim(),
+      reply_to: emailInput.value.trim(),
       category: categorySelect ? categorySelect.value : 'General',
       subject: subjectInput ? subjectInput.value.trim() : 'Inquiry',
       message: messageInput.value.trim()
     };
 
+    if (isEmailJSConfigured() && !window.emailjs) {
+      showError(submitBtn, statusBox, originalText, 'The email service could not load. Please check your connection and try again.');
+      return;
+    }
     if (isEmailJSConfigured() && window.emailjs) {
       // Real EmailJS Dispatch
-      window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, { publicKey: EMAILJS_PUBLIC_KEY })
         .then(() => {
           showSuccess(submitBtn, statusBox, nameInput, emailInput, messageInput);
         })
         .catch((err) => {
-          showError(submitBtn, statusBox, originalText, err.text || 'Network transmission error.');
+          showError(submitBtn, statusBox, originalText, err?.text || 'Network transmission error.');
         });
     } else {
       // Graceful Simulated Demo Mode with informational guidance
@@ -111,7 +118,7 @@
       statusBox.innerHTML = `
         <h4 style="font-weight:800; font-size:1.05rem; margin-bottom:0.25rem;">Thank you for contacting Global Fusion 2026!</h4>
         <p style="font-size:0.9rem; margin-bottom:0.35rem;">Your message has been recorded. Our academic liaison committee will respond within 24 hours.</p>
-        ${isDemo ? '<small style="opacity:0.85; font-size:0.75rem;">(Demo Notice: EmailJS constants are currently placeholders in js/contact.js. Insert actual credentials for live mail delivery.)</small>' : ''}
+        ${isDemo ? '<small style="opacity:0.85; font-size:0.75rem;">(Demo Notice: EmailJS constants are currently placeholders in js/contact.js. Configure js/emailjs-config.js and link an auto-reply template in EmailJS for live mail delivery.)</small>' : ''}
       `;
     }
 
