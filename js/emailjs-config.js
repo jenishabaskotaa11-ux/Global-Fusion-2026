@@ -11,7 +11,7 @@
  * 5. Fill in the three public identifiers below.
  */
 window.GFEmailConfig = Object.freeze({
-  publicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
-  serviceId: 'YOUR_EMAILJS_SERVICE_ID',
-  notificationTemplateId: 'YOUR_EMAILJS_TEMPLATE_ID'
+  publicKey: 'U-dxU5ZbSZqd2rulI',
+  serviceId: 'service_hcao4lo',
+  notificationTemplateId: 'template_qrxhp06'
 });
