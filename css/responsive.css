@@ -262,3 +262,10 @@
   .mobile-nav-drawer, .passport-modal-backdrop { overflow-y: auto; }
   .passport-booklet, #video-modal > div { max-height: 85dvh; overflow-y: auto; }
 }
+
+/* Dashboard remains in the desktop header; the compact header uses its drawer link. */
+@media screen and (max-width: 1200px) {
+  .header-actions a[href="dashboard.html"] {
+    display: none;
+  }
+}
