@@ -99,10 +99,10 @@
       id: 11,
       category: 'videos',
       type: 'video',
-      title: 'Global Fusion 2026: Spirit of Kathmandu (Trailer)',
-      caption: 'Official 4K documentary trailer capturing campus pavilion preparations and festival rehearsals.',
-      thumbnail: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/kXYiU_JCYtU?autoplay=1'
+      title: 'Global Fusion 2026 — Featured Video',
+      caption: 'Watch the featured YouTube video selected for the Global Fusion gallery.',
+      thumbnail: 'https://i.ytimg.com/vi/hXKCEe167tY/hqdefault.jpg',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/hXKCEe167tY?autoplay=1'
     },
     {
       id: 12,
