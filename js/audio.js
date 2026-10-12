@@ -11,10 +11,10 @@
       country: 'Nepal',
       title: 'Nepali Sarangi Reverie',
       genre: 'Himalayan Folk Heritage',
-      duration: 145,
+      duration: 15.312,
       photo: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=300&q=80',
       src: '../assets/audio/nepal_sarangi.mp3',
-      fallbackSrc: '../assets/audio/nepal_sarangi.wav'
+      fallbackSrc: null
     },
     {
       id: 'malaysia_gamelan',
