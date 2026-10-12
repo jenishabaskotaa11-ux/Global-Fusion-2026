@@ -83,8 +83,8 @@
       type: 'image',
       title: 'LBEF & APU Academic Collaborative Teams',
       caption: 'International student organizing committee uniting over 20 campus cultures in Kathmandu.',
-      thumbnail: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
-      fullImage: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=85'
+      thumbnail: '../assets/images/gallery/lbef-academic-collaborative-teams.webp',
+      fullImage: '../assets/images/gallery/lbef-academic-collaborative-teams.webp'
     },
     {
       id: 10,
